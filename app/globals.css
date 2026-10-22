@@ -75,6 +75,7 @@ tbody tr:hover { background: #f6fbff; }
 .score-box { display: grid; gap: 4px; background: #eef7ff; border: 1px solid #c7e3fa; border-radius: 12px; padding: 13px; }
 .score-box span, .score-box small { color: #536b82; font-size: .72rem; }
 .score-box strong { font-size: 1.35rem; }
+.ml-score { margin-top: 8px; background: #f4efff; border-color: #ded0ff; }
 .components-list { margin: 0; padding-left: 20px; font-size: .79rem; line-height: 1.7; }
 .reading-list { display: grid; gap: 6px; }
 .reading-list div { display: grid; grid-template-columns: 56px 1fr; gap: 2px 8px; border-bottom: 1px solid #edf1f5; padding: 6px 0; font-size: .72rem; }

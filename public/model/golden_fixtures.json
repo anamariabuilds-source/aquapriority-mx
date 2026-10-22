@@ -1,0 +1,134 @@
+[
+  {
+    "case_id": "SYN-TRAIN-000-0",
+    "features": {
+      "pressure_drop": 0.3481286117048438,
+      "flow_rise": 0.22872796591152236,
+      "quality_score": 0.7287334346356972,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 1.0
+    },
+    "expected_probability": 0.6326505750531282
+  },
+  {
+    "case_id": "SYN-TRAIN-000-1",
+    "features": {
+      "pressure_drop": 0.411167765382189,
+      "flow_rise": 0.26864080163614623,
+      "quality_score": 0.8043669302517839,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 1.0
+    },
+    "expected_probability": 0.7366344581108023
+  },
+  {
+    "case_id": "SYN-TRAIN-000-2",
+    "features": {
+      "pressure_drop": 0.5825390652830005,
+      "flow_rise": 0.26814183343979925,
+      "quality_score": 0.7969416395258752,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 1.0
+    },
+    "expected_probability": 0.8528772351692581
+  },
+  {
+    "case_id": "SYN-TRAIN-000-3",
+    "features": {
+      "pressure_drop": 0.45953365125560297,
+      "flow_rise": 0.29223814119071306,
+      "quality_score": 0.7943861624784718,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 1.0
+    },
+    "expected_probability": 0.7836037542376801
+  },
+  {
+    "case_id": "SYN-TRAIN-006-0",
+    "features": {
+      "pressure_drop": 0.2542750200779146,
+      "flow_rise": 0.019455270268534608,
+      "quality_score": 0.9427627253431127,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 2.0
+    },
+    "expected_probability": 0.5428549250469241
+  },
+  {
+    "case_id": "SYN-TRAIN-006-1",
+    "features": {
+      "pressure_drop": 0.34403947977223026,
+      "flow_rise": 0.024709807145818774,
+      "quality_score": 1.0,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 2.0
+    },
+    "expected_probability": 0.6578556562751247
+  },
+  {
+    "case_id": "SYN-TRAIN-006-2",
+    "features": {
+      "pressure_drop": 0.28061460195470894,
+      "flow_rise": 0.05287016659705571,
+      "quality_score": 0.9793837461262915,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 2.0
+    },
+    "expected_probability": 0.6049901921377017
+  },
+  {
+    "case_id": "SYN-TRAIN-006-3",
+    "features": {
+      "pressure_drop": 0.25178707543079115,
+      "flow_rise": 0.13094019308666205,
+      "quality_score": 1.0,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 2.0
+    },
+    "expected_probability": 0.6317213696532047
+  },
+  {
+    "case_id": "SYN-TRAIN-009-0",
+    "features": {
+      "pressure_drop": 0.25824931556981123,
+      "flow_rise": 0.36066805312379774,
+      "quality_score": 1.0,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 0.0
+    },
+    "expected_probability": 0.6438940555892619
+  },
+  {
+    "case_id": "SYN-TRAIN-009-1",
+    "features": {
+      "pressure_drop": 0.24654550860283947,
+      "flow_rise": 0.39901545826351614,
+      "quality_score": 0.9782512036157973,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 0.0
+    },
+    "expected_probability": 0.6488628185913335
+  },
+  {
+    "case_id": "SYN-TRAIN-009-2",
+    "features": {
+      "pressure_drop": 0.3275640639393233,
+      "flow_rise": 0.4001984603738883,
+      "quality_score": 0.9805064686003099,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 0.0
+    },
+    "expected_probability": 0.7252092949950603
+  },
+  {
+    "case_id": "SYN-TRAIN-009-3",
+    "features": {
+      "pressure_drop": 0.35693149703897364,
+      "flow_rise": 0.32938885777767507,
+      "quality_score": 1.0,
+      "interruption_ordinal": 1.0,
+      "vulnerability_ordinal": 0.0
+    },
+    "expected_probability": 0.7180791548851824
+  }
+]
