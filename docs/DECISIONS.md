@@ -21,3 +21,10 @@
 
 ## Session close status
 Packet written; working Git repository is not connected here, therefore **commit/push not performed**, and no commit is claimed.
+
+## 2026-10-22 · Implementation authorization and audit correction
+- Historical note preserved: the preceding session-close statement became stale after commit `1c55139` was created. Git now verifies that commit as the root commit containing the Packet, Blueprint, decisions log, Packet PDF and pre-code mockup before any application code.
+- The approved implementation audit is accepted. `docs/METHODOLOGY.md` freezes the spreadsheet baseline, sensor validation and feature formulas, 0–100 rule specification, tie-breaking, ML target/evaluation gates, human-authority transitions and adversarial fairness cases before implementation.
+- Hosting remains Vercel as required; the unrelated Sites/Cloudflare workflow is not used.
+- Security baseline: raw terminal recording, environment files, dependencies, build output and sensitive logs are excluded from Git. No accounts, Supabase, personal data or external write API are authorized.
+- Current external blocker: no Git remote is configured, so pushes and GitHub-linked deployment cannot occur until repository access is supplied. Local implementation and verification may continue.

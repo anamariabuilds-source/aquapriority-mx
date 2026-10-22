@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Secrets and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private/raw transcripts and sensitive logs
+BUILDCHAT_terminal_raw.txt
+*.log
+transcripts/private/
+
+# Hosting metadata that may contain local state
+.vercel/
+
