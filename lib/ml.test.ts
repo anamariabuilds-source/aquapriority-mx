@@ -1,7 +1,8 @@
 import { createHash } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import fixtures from "@/public/model/golden_fixtures.json";
-import { getMlArtifact, predictInspectionSignal, validateMlArtifact, type MlFeatures } from "@/lib/ml";
+import { compareMlSignals, getMlArtifact, predictInspectionSignal, validateMlArtifact, type MlFeatures } from "@/lib/ml";
+import { INCIDENTS } from "@/data/incidents";
 
 function canonicalJson(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(canonicalJson).join(",")}]`;
@@ -38,5 +39,11 @@ describe("trained synthetic ML artifact", () => {
     const artifact = getMlArtifact();
     expect(predictInspectionSignal(fixtures[0].features as MlFeatures, { ...artifact, feature_names: ["wrong"] })).toBeNull();
     expect(predictInspectionSignal({ ...fixtures[0].features, flow_rise: Number.NaN } as MlFeatures)).toBeNull();
+  });
+
+  it("keeps deterministic sheet order when all ML signals are unavailable", () => {
+    const reversed = [...INCIDENTS].reverse().map((incident) => ({ incident, probability: null }));
+    reversed.sort(compareMlSignals);
+    expect(reversed.map((item) => item.incident.sheetRow)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 });

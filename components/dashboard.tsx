@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { INCIDENTS } from "@/data/incidents";
 import { rankByRules } from "@/lib/rules";
 import { extractSensorFeatures, simulateReadings } from "@/lib/simulator";
-import { buildMlFeatures, getMlArtifact, predictInspectionSignal } from "@/lib/ml";
+import { buildMlFeatures, compareMlSignals, getMlArtifact, predictInspectionSignal } from "@/lib/ml";
 import type { ScenarioId } from "@/types/domain";
 import type { Incident, ReviewerRole } from "@/types/domain";
 import { appendPriorityOverride, getNextStatus, getRequiredRole, transitionStatus } from "@/lib/workflow";
@@ -33,7 +33,7 @@ export function Dashboard() {
     const sensor = extractSensorFeatures(incident, simulateReadings(incident, scenario));
     const features = buildMlFeatures(incident, sensor);
     return { incident, probability: features ? predictInspectionSignal(features) : null };
-  }).sort((a, b) => b.probability === null ? -1 : a.probability === null ? 1 : b.probability - a.probability || a.incident.sheetRow - b.incident.sheetRow || a.incident.id.localeCompare(b.incident.id)), [incidents, scenario]);
+  }).sort(compareMlSignals), [incidents, scenario]);
   const mlById = useMemo(() => new Map(mlResults.map((item, index) => [item.incident.id, { ...item, rank: index + 1 }])), [mlResults]);
   const ordered = mode === "RULES" ? rules.map((item) => incidents.find((incident) => incident.id === item.incidentId)!) : mode === "ML" ? mlResults.map((item) => item.incident) : [...incidents];
   const selected = incidents.find((incident) => incident.id === selectedId) ?? incidents[0];

@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: { alias: { "@": path.resolve(import.meta.dirname, ".") } },
   test: {
+    include: ["{app,components,lib}/**/*.test.{ts,tsx}"],
     environment: "jsdom",
     setupFiles: ["./vitest.setup.ts"],
     coverage: { reporter: ["text", "json", "html"] },

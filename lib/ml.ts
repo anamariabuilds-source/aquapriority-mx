@@ -75,3 +75,12 @@ export function predictInspectionSignal(features: MlFeatures, value: MlArtifact 
 }
 
 export function getMlArtifact(): MlArtifact { return artifact; }
+
+export function compareMlSignals(left: { incident: Incident; probability: number | null }, right: { incident: Incident; probability: number | null }): number {
+  if (left.probability === null && right.probability === null) {
+    return left.incident.sheetRow - right.incident.sheetRow || left.incident.id.localeCompare(right.incident.id);
+  }
+  if (left.probability === null) return 1;
+  if (right.probability === null) return -1;
+  return right.probability - left.probability || left.incident.sheetRow - right.incident.sheetRow || left.incident.id.localeCompare(right.incident.id);
+}

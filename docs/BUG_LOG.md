@@ -27,6 +27,13 @@ Expected IDs began `INC-FX-1047`, `INC-FX-1032`, `INC-FX-1075`; received IDs beg
 
 The ML comparator returned `-1` whenever the right-hand probability was null. When both values were null it still returned `-1`, violating comparator antisymmetry and causing V8 to reverse the array.
 
-### Fix and redeployment
+### Fix
 
-Pending at the time this evidence entry was committed. The next commit must implement an explicit both-null tie path, add a unit regression, run the browser regression, and produce Deployment 2.
+The comparator now handles both-null values explicitly using `sheetRow` ascending and incident ID ascending, handles exactly one null value separately, and only compares probabilities when both are finite results. A unit regression sorts a deliberately reversed all-null set and requires rows 1–8. The original Playwright regression remains unchanged.
+
+### Post-fix verification
+
+- Unit suite: 21 passed, including the explicit all-null comparator regression.
+- Local Playwright: 3 passed, including the unchanged browser reproduction.
+- TypeScript and lint: passed before the fix verification cycle.
+- Deployment 2: pending at the time of this edit; deployment evidence must be appended rather than assumed.
