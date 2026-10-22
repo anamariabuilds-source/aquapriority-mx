@@ -28,3 +28,4 @@ transcripts/private/
 
 # Hosting metadata that may contain local state
 .vercel/
+.vercel

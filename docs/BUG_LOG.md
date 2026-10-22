@@ -36,4 +36,6 @@ The comparator now handles both-null values explicitly using `sheetRow` ascendin
 - Unit suite: 21 passed, including the explicit all-null comparator regression.
 - Local Playwright: 3 passed, including the unchanged browser reproduction.
 - TypeScript and lint: passed before the fix verification cycle.
-- Deployment 2: pending at the time of this edit; deployment evidence must be appended rather than assumed.
+- Deployment 2 `dpl_AyaNYp6PXXUYuGj3cFfYLqsWrEMN`: Ready and public.
+- Deployment 2 Playwright: 4 passed, including the unchanged BUG-001 browser regression.
+- Production URL: https://aquapriority-mx.vercel.app

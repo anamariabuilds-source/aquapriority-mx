@@ -22,4 +22,19 @@ Deployment 1 is preserved as the pre-application-bug-fix deployment. It contains
 
 ## Deployment 2
 
-Pending regression fix and redeployment. Do not infer a URL or successful result until recorded here.
+- Vercel project: `anamaria-builds/aquapriority-mx`
+- Deployment ID: `dpl_AyaNYp6PXXUYuGj3cFfYLqsWrEMN`
+- Git commit: `1d71aed` (`fix: stabilize ML unavailable ordering with regression coverage`)
+- Created: 2026-10-22 13:02:48 America/Mexico_City
+- Immutable URL: https://aquapriority-1d8hj2voq-anamaria-builds.vercel.app
+- Production URL: https://aquapriority-mx.vercel.app
+- Vercel terminal state: `READY`
+- Deployment protection reported by Vercel: none
+
+### Mechanical results
+
+- Four deployed Playwright flows passed: comparison/scenario behavior, map and guarded review workflow, unchanged BUG-001 regression, and five ordered persona screenshot captures.
+- BUG-001 now retains `sheetRow` order 1→8 when all ML signals are unavailable.
+- Deployment IDs and immutable URLs are distinct from Deployment 1.
+
+Deployment 2 is the current verified production version. Reachability and test success demonstrate software behavior only; they do not demonstrate real repairs, water savings, cost savings, or field model validity.

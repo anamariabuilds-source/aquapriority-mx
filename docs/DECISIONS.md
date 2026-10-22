@@ -28,3 +28,29 @@ Packet written; working Git repository is not connected here, therefore **commit
 - Hosting remains Vercel as required; the unrelated Sites/Cloudflare workflow is not used.
 - Security baseline: raw terminal recording, environment files, dependencies, build output and sensitive logs are excluded from Git. No accounts, Supabase, personal data or external write API are authorized.
 - Current external blocker: no Git remote is configured, so pushes and GitHub-linked deployment cannot occur until repository access is supplied. Local implementation and verification may continue.
+
+## 2026-10-22 · Complete implementation and two-deployment session
+- Built a responsive Spanish Next.js dashboard over eight validated fictional incidents. The immutable spreadsheet baseline, transparent 0–100 rules and trained experimental ML all consume the same incident/sensor evidence.
+- Implemented deterministic simulated pressure/flow scenarios with validation and visible recomputation. Incomplete evidence abstains as `REVIEW REQUIRED`; ML separately returns `ML UNAVAILABLE`.
+- Trained scikit-learn logistic regression with fixed seed, group-disjoint holdout, saved coefficients/scaler/checksum and Python/TypeScript golden parity. Actual synthetic holdout: F1 `0.804469`, ROC-AUC `0.755090`, Brier `0.196724`; not field validation.
+- Implemented Leaflet with eight fictional markers, fictional service-context polygons, two-way incident selection, OpenStreetMap attribution and accessible tile-failure fallback.
+- Implemented role-gated exact status transitions, bounded confirmed human overrides, append-only in-session evidence/review history, and reset. No persistent municipal audit claim is made.
+- Mechanical result: typecheck passed; lint passed; 21 unit/component tests passed; production build passed; dependency audit found zero vulnerabilities; final Deployment 2 browser suite passed 4 tests.
+- Genuine BUG-001 was preserved on Deployment 1: all unavailable ML cases reversed because the comparator violated antisymmetry. Commit `1d71aed` added the explicit both-null tie path and regression coverage; Deployment 2 passes.
+- Deployment 1: `dpl_BCtXw2Xm5pv7tBqz5vMyfJqwp74V`. Deployment 2: `dpl_AyaNYp6PXXUYuGj3cFfYLqsWrEMN`. Current verified production URL: `https://aquapriority-mx.vercel.app`.
+- Five ordered screenshots from Deployment 2 and a fresh-chat persona protocol are prepared. Persona responses, persona-driven correction, `PERSONA_AnaMariaMatas.pdf`, demo video and final Build Chat PDF remain unperformed and must not be claimed.
+- Native Codex JSONL and the separate raw terminal capture exist privately. Export/redaction procedure is documented; neither raw source is committed.
+
+## Remaining risks and blockers
+- No GitHub remote is configured and the `gh` CLI is unavailable. A GitHub repository URL/authenticated remote is required for push evidence.
+- The fresh-chat persona test must be performed by the user in a separate conversation using the ordered screenshots; its responses cannot be fabricated here.
+- `DEMO_AnaMariaMatas.mp4`, `PERSONA_AnaMariaMatas.pdf` and `BUILDCHAT_AnaMariaMatas.pdf` remain pending.
+- OpenStreetMap basemap access depends on network connectivity; the accessible incident list is the tested fallback.
+
+## Next session's first action
+1. Run the separate fresh-chat persona test with `docs/persona-screenshots/01-baseline.png` through `05-human-review.png` in order and preserve every response verbatim.
+2. Record all confusions, implement and test the highest-severity confirmed usability correction, then redeploy if the product changes.
+3. Configure the authenticated GitHub remote, push the complete history, and record the repository URL.
+
+## Session close status
+Core application, Dragon Stack, comparison, mechanical testing, genuine bug-fix-redeploy cycle, two Vercel deployments, security scan and persona-test preparation are complete. External submission artifacts and the separate persona interaction remain pending as explicitly listed above.
