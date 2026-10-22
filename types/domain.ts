@@ -17,6 +17,7 @@ export interface ReviewEvent {
   role: ReviewerRole;
   action: "PRIORITY_OVERRIDE" | "STATUS_TRANSITION" | "CORRECTION";
   rationale: string;
+  priority?: number;
 }
 
 export type ReviewerRole = "COORDINADOR_DE_TRIAGE" | "INSPECTOR_CALIFICADO" | "SUPERVISOR_DE_REPARACION" | "REVISOR_INDEPENDIENTE";

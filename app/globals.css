@@ -82,6 +82,27 @@ tbody tr:hover { background: #f6fbff; }
 .reading-list strong { font-size: .76rem; }
 .reading-list small { grid-column: 2; color: var(--muted); }
 .audit-warning { background: #fff6d9; border-radius: 8px; padding: 9px; color: #6a5200 !important; }
+.map-panel { background: white; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 36px rgba(16,36,62,.07); overflow: hidden; margin-bottom: 16px; }
+.map-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 13px 16px; }
+.map-heading div { display: grid; gap: 2px; }
+.map-heading small { color: var(--muted); }
+.map-heading span { background: #ddf7ee; color: #076849; border-radius: 999px; padding: 5px 9px; font-size: .72rem; font-weight: 800; }
+.map-frame { height: 330px; border-block: 1px solid var(--line); background: #e7eef4; }
+.map-loading { height: 330px; display: grid; place-items: center; background: #e7eef4; color: var(--muted); }
+.map-fallback { padding: 9px 16px; background: #fff1c8; color: #6d5100; font-size: .78rem; }
+.map-accessible-list { padding: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.map-accessible-list button { border: 1px solid #bbcada; background: white; color: #244662; border-radius: 8px; padding: 6px 8px; font-size: .7rem; font-weight: 700; }
+.map-accessible-list button[aria-pressed="true"] { background: #dff5ff; border-color: #188bc1; }
+.form-label { display: grid; gap: 5px; margin: 9px 0; color: #536b82; font-size: .72rem; font-weight: 800; }
+.form-label select, .form-label input, .form-label textarea { width: 100%; border: 1px solid #b8c9db; border-radius: 8px; padding: 8px; background: white; color: var(--ink); }
+.form-label textarea { resize: vertical; min-height: 64px; }
+.confirm-label { display: flex; align-items: start; gap: 7px; font-size: .72rem; line-height: 1.4; margin: 10px 0; }
+.action { width: 100%; border: 0; border-radius: 8px; background: #0877cc; color: white; padding: 9px; font-weight: 800; font-size: .76rem; }
+.action.secondary { background: white; color: #075ca8; border: 1px solid #2583dc; }
+.reset-button { width: 100%; border: 0; background: transparent; color: #6d5260; text-decoration: underline; padding: 9px; font-size: .72rem; }
+.transition-note, .form-message { border-radius: 8px; padding: 8px !important; background: #edf7ff; color: #214e71 !important; }
+.history-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: .72rem; line-height: 1.5; }
+.leaflet-container { font-family: Arial, Helvetica, sans-serif; }
 
 @media (max-width: 900px) {
   .topbar { align-items: stretch; flex-wrap: wrap; }
