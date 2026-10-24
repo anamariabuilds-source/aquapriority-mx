@@ -3,6 +3,11 @@ import { expect, test } from "@playwright/test";
 test("compares methods and updates evidence from simulated scenarios", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByText("DEMO · DATOS SINTÉTICOS · NO OPERATIVO")).toBeVisible();
+  const methodGuide = page.getByLabel("Cómo interpretar los tres métodos");
+  await expect(methodGuide).toContainText("no calcula urgencia");
+  await expect(methodGuide).toContainText("no es un porcentaje de certeza");
+  await expect(methodGuide).toContainText("amerita inspección humana");
+  await expect(methodGuide).toContainText("ningún ranking autoriza reparar, excavar o despachar");
   await expect(page.getByText("8 marcadores")).toBeVisible();
   const firstReading = page.locator(".reading-list strong").first();
   const anomalyReading = await firstReading.textContent();

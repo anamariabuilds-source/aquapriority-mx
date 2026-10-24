@@ -67,6 +67,11 @@ tbody tr:hover { background: #f6fbff; }
 .tabs button[aria-selected="true"] { background: #e7f4ff; border-color: #2583dc; color: #075ca8; }
 .scenario-control { display: grid; gap: 5px; font-size: .7rem; font-weight: 800; color: #526681; min-width: 220px; }
 .scenario-control select { padding: 8px 10px; border: 1px solid #b8c9db; border-radius: 8px; background: white; color: var(--ink); }
+.method-guide { margin: 14px 18px 0; padding: 13px 15px; border: 1px solid #c9dced; border-left: 4px solid #2583dc; border-radius: 10px; background: #f5faff; }
+.method-guide > strong { display: block; margin-bottom: 8px; font-size: .84rem; }
+.method-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 18px; }
+.method-guide p { margin: 0; color: #435d77; font-size: .76rem; line-height: 1.45; }
+.method-guide b { color: var(--ink); }
 .selected-row { background: #edf8ff; box-shadow: inset 4px 0 #0b8dd2; }
 .detail-panel { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 19px; box-shadow: 0 12px 36px rgba(16,36,62,.07); position: sticky; top: 14px; }
 .detail-panel h3 { margin: 0 0 9px; font-size: 1.35rem; }
@@ -114,6 +119,7 @@ tbody tr:hover { background: #f6fbff; }
   .dashboard-grid { grid-template-columns: 1fr; }
   .detail-panel { position: static; }
   .controls { align-items: stretch; flex-direction: column; }
+  .method-guide-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
